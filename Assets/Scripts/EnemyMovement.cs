@@ -8,8 +8,9 @@ public class EnemyMovement : MonoBehaviour
     public float horizontalWidth = 5f;
 
     public GameObject bulletPrefab;
-    public int shootDelay = 2;
+    public float shootDelay = 2;
     public int shootDamage = 1;
+    public float shotSpeed = 1;
 
     private Vector2 shootDirection = Vector2.down;
     private float lifetime = 0;
@@ -32,18 +33,15 @@ public class EnemyMovement : MonoBehaviour
     {
         lifetime += enemySpeed * Time.fixedDeltaTime;
 
-        enemyRB.linearVelocity = new Vector2(horizontalWidth * Mathf.Sin(lifetime), -lifetime);
+        enemyRB.linearVelocity = new Vector2(horizontalWidth * Mathf.Sin(lifetime), -enemySpeed);
     }
 
     IEnumerator Shoot()
     {
         yield return new WaitForSeconds(shootDelay);
         GameObject bullet = Instantiate(bulletPrefab, gameObject.transform.position, gameObject.transform.rotation);
-        bullet.GetComponent<Rigidbody2D>().linearVelocity = shootDirection;
-        /*
-        bulletScript = bullet.GetComponent<>();
-        bulletScript.damage = shootDamage;
-        bulletScript.isPlayer = false;
-        */
+   
+        ProjectileScript bulletScript = bullet.GetComponent<ProjectileScript>();
+        bulletScript.initializeProj(shootDamage, false, shootDirection, shotSpeed);
     }
 }
