@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4491449209845876406}
   - component: {fileID: 4359700668685843590}
+  - component: {fileID: 6422472303915110112}
+  - component: {fileID: -5607333437497748818}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -52,3 +54,30 @@ MonoBehaviour:
   - {x: 0, y: 5}
   - {x: 3, y: 5}
   - {x: 7, y: 5}
+--- !u!114 &6422472303915110112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9058671763624753764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28fc54a6b080b486c9739a341885022a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameTimerManager
+  gameTime: 0
+--- !u!114 &-5607333437497748818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9058671763624753764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a070eee226dc84f378a3978703e4797a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameoverManager
+  gameTimerManager: {fileID: 6422472303915110112}
+  playerMovement: {fileID: 0}
