@@ -9,6 +9,7 @@ public class EnemyMovement : MonoBehaviour
 
     public GameObject bulletPrefab;
     public int shootDelay = 2;
+    public int shootDamage = 1;
 
     private Vector2 shootDirection = Vector2.down;
     private float lifetime = 0;
@@ -39,5 +40,10 @@ public class EnemyMovement : MonoBehaviour
         yield return new WaitForSeconds(shootDelay);
         GameObject bullet = Instantiate(bulletPrefab);
         bullet.GetComponent<Rigidbody2D>().linearVelocity = shootDirection;
+        /*
+        bulletScript = bullet.GetComponent<>();
+        bulletScript.damage = shootDamage;
+        bulletScript.isPlayer = false;
+        */
     }
 }
