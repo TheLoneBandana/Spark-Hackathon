@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   basicEnemyPrefab: {fileID: 2598144661555163135, guid: 55b1a9710bb4e9d4e96036059dbf42d7, type: 3}
-  spawnDelay: 5
+  spawnDelay: 1
   spawnPositions:
   - {x: -7, y: 5}
   - {x: -3, y: 5}
