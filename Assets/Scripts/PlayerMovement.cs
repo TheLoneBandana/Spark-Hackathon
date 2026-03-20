@@ -25,4 +25,6 @@ public class PlayerMovement : MonoBehaviour
 
         rb.linearVelocity = playerMovement * speed;
     }
+
+    public bool IsDead => playerHealth <= 0;
 }
