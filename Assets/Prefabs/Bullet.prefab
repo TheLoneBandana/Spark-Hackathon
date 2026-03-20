@@ -81,7 +81,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 4013075563435693789, guid: b0eb7d905c2160744ba07fad91e55290, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -109,6 +109,8 @@ MonoBehaviour:
   enemyProjSprite: {fileID: -2908384742826982882, guid: 12d1eff4c8acf5c46b827dab7a4cd31a, type: 3}
   isPlayerProjectile: 0
   enemyDamage: 0
+  speed: 0
+  currentFlyDistance: 0
 --- !u!50 &3653545450055026517
 Rigidbody2D:
   serializedVersion: 5
