@@ -22,4 +22,6 @@ public class PlayerMovement : MonoBehaviour
         Vector2 playerMovement = movement.ReadValue<Vector2>();
         rb.linearVelocity = playerMovement * speed;
     }
+
+    public bool IsDead => playerHealth <= 0;
 }
