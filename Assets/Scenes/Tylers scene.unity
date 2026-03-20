@@ -440,9 +440,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7400000, guid: d27edb2619ace15438bdffe5c335b905, type: 2}
     - target: {fileID: 6108703301970857026, guid: 4eef8138bc9d05748a19be63e3cc7562, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108703301970857026, guid: 4eef8138bc9d05748a19be63e3cc7562, type: 3}
+      propertyPath: m_Size.y
+      value: 0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108703301970857026, guid: 4eef8138bc9d05748a19be63e3cc7562, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 275574838042477278, guid: 68a164274533a8546852fee042d26083, type: 3}
+    - target: {fileID: 6108703301970857026, guid: 4eef8138bc9d05748a19be63e3cc7562, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108703301970857026, guid: 4eef8138bc9d05748a19be63e3cc7562, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6395388539175126900, guid: 4eef8138bc9d05748a19be63e3cc7562, type: 3}
       propertyPath: m_Name
       value: PC
