@@ -6,6 +6,8 @@ public class GameTimerManager : MonoBehaviour
     public TextMeshProUGUI timerUI;
     public float gameTime;
 
+    public bool IsGameTimerEnd;
+
     private float gameTimer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -20,9 +22,9 @@ public class GameTimerManager : MonoBehaviour
         gameTimer += UnityEngine.Time.deltaTime;
 
         timerUI.text = string.Format("{0}:{1}, survive until {2}", GetGameMin(), GetGameSec(), GetTotalGameTime());
-    }
 
-    public bool IsGameTimerEnd => gameTimer >= gameTime;
+        IsGameTimerEnd = gameTimer >= gameTime;
+    }
 
     public int GetGameMin()
     { 

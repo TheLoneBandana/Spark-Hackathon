@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
 
     public int playerHealth = 10;
+    public bool IsDead;
 
     private InputAction movement;
 
@@ -18,6 +19,11 @@ public class PlayerMovement : MonoBehaviour
         PlayerAnimations = GetComponent<Animation>();
     }
 
+    void Update()
+    {
+        IsDead = playerHealth <= 0;
+    }
+
     void FixedUpdate()
     {
         //waits for input
@@ -25,6 +31,4 @@ public class PlayerMovement : MonoBehaviour
 
         rb.linearVelocity = playerMovement * speed;
     }
-
-    public bool IsDead => playerHealth <= 0;
 }
