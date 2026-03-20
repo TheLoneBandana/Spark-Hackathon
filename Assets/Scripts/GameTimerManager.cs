@@ -1,7 +1,9 @@
+using TMPro;
 using UnityEngine;
 
 public class GameTimerManager : MonoBehaviour
 {
+    public TextMeshProUGUI timerUI;
     public float gameTime;
 
     private float gameTimer;
@@ -16,19 +18,30 @@ public class GameTimerManager : MonoBehaviour
     void Update()
     {
         gameTimer += UnityEngine.Time.deltaTime;
+
+        timerUI.text = string.Format("{0}:{1}, survive until {2}", GetGameMin(), GetGameSec(), GetTotalGameTime());
     }
 
     public bool IsGameTimerEnd => gameTimer >= gameTime;
 
+    public int GetGameMin()
+    { 
+        return ((int)(gameTimer / 60));
+    }
+
+    public int GetGameSec() 
+    {
+        return ((int)(gameTimer - GetGameMin() * 60));
+    }
+    /*
     public void GetGameTime(out int minutes, out int seconds)
     {
         minutes = (int)(gameTimer / 60);
         seconds = (int)(gameTimer - minutes*60); 
-    }
+    }*/
 
-    public void GetTotalGameTime(out int minutes, out int seconds)
+    public string GetTotalGameTime()
     {
-        minutes = (int)(gameTime / 60);
-        seconds = (int)(gameTime - minutes*60); 
+        return "3:00";
     }
 }
