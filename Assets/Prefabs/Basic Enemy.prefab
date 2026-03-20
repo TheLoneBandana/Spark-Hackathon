@@ -134,8 +134,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   enemyRB: {fileID: 2792113594107233}
-  enemySpeed: 0.5
-  horizontalWidth: 5
+  enemySpeed: 2
+  horizontalWidth: 4
   bulletPrefab: {fileID: 0}
   shootDelay: 2
   shootDamage: 1

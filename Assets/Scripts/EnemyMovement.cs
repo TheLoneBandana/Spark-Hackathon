@@ -32,13 +32,13 @@ public class EnemyMovement : MonoBehaviour
     {
         lifetime += enemySpeed * Time.fixedDeltaTime;
 
-        enemyRB.position = new Vector2(horizontalWidth * Mathf.Sin(lifetime), -lifetime);
+        enemyRB.linearVelocity = new Vector2(horizontalWidth * Mathf.Sin(lifetime), -lifetime);
     }
 
     IEnumerator Shoot()
     {
         yield return new WaitForSeconds(shootDelay);
-        GameObject bullet = Instantiate(bulletPrefab);
+        GameObject bullet = Instantiate(bulletPrefab, gameObject.transform.position, gameObject.transform.rotation);
         bullet.GetComponent<Rigidbody2D>().linearVelocity = shootDirection;
         /*
         bulletScript = bullet.GetComponent<>();
