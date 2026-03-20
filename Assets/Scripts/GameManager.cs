@@ -24,8 +24,11 @@ public class GameManager : MonoBehaviour
 
     IEnumerator Spawn()
     {
-        spawnIndex = Random.Range(0, spawnPosCount - 1);
-        yield return new WaitForSeconds(spawnDelay);
-        GameObject enemy = Instantiate(basicEnemyPrefab, spawnPositions[spawnIndex], gameObject.transform.rotation);
+        while (gameObject.activeSelf)
+        {
+            spawnIndex = Random.Range(0, spawnPosCount - 1);
+            yield return new WaitForSeconds(spawnDelay);
+            GameObject enemy = Instantiate(basicEnemyPrefab, spawnPositions[spawnIndex], gameObject.transform.rotation);
+        }
     }
 }

@@ -137,7 +137,7 @@ MonoBehaviour:
   enemySpeed: 1
   horizontalWidth: 4
   bulletPrefab: {fileID: 1563014345777366584, guid: aa22fc2e19b7de14dbf11f08e1430d39, type: 3}
-  shootDelay: 0.125
+  shootDelay: 1
   shootDamage: 1
   shotSpeed: 1.5
 --- !u!61 &191168214816649026

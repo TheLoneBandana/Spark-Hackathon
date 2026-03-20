@@ -38,10 +38,13 @@ public class EnemyMovement : MonoBehaviour
 
     IEnumerator Shoot()
     {
-        yield return new WaitForSeconds(shootDelay);
-        GameObject bullet = Instantiate(bulletPrefab, gameObject.transform.position, gameObject.transform.rotation);
-   
-        ProjectileScript bulletScript = bullet.GetComponent<ProjectileScript>();
-        bulletScript.initializeProj(shootDamage, false, shootDirection, shotSpeed);
+        while (gameObject.activeSelf)
+        {
+            yield return new WaitForSeconds(shootDelay);
+            GameObject bullet = Instantiate(bulletPrefab, gameObject.transform.position, gameObject.transform.rotation);
+
+            ProjectileScript bulletScript = bullet.GetComponent<ProjectileScript>();
+            bulletScript.initializeProj(shootDamage, false, shootDirection, shotSpeed);
+        }
     }
 }
