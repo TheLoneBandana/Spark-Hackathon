@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 5f;
     public Rigidbody2D rb;
 
+    public int playerHealth = 10;
+
     private InputAction movement;
 
     void Start()
