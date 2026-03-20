@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameoverManager : MonoBehaviour
 {
@@ -15,11 +16,11 @@ public class GameoverManager : MonoBehaviour
 
     private void GameWin()
     {
-        
+        SceneManager.LoadScene("GameWon");
     }
 
     private void GameLose()
     {
-        
+        SceneManager.LoadScene("GameLose");
     }
 }

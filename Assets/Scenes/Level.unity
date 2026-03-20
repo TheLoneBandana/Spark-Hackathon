@@ -710,6 +710,10 @@ PrefabInstance:
       propertyPath: timerUI
       value: 
       objectReference: {fileID: 856104439}
+    - target: {fileID: 6422472303915110112, guid: c1e78230af47e6248bae800246f72227, type: 3}
+      propertyPath: gameTime
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 9058671763624753764, guid: c1e78230af47e6248bae800246f72227, type: 3}
       propertyPath: m_Name
       value: GameManager
